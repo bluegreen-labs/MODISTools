@@ -1,16 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# MODISTools <a href='https://github.com/ropensci/MODISTools'><img src='https://raw.githubusercontent.com/ropensci/MODISTools/master/MODISTools-logo.png' align="right" height="139" /></a>
+# MODISTools <a href='https://github.com/ropensci/MODISTools'><img src='https://raw.githubusercontent.com/bluegreen-labs/MODISTools/master/MODISTools-logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 
 [![R build
-status](https://github.com/ropensci/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/MODISTools/actions)
-[![codecov](https://codecov.io/gh/ropensci/MODISTools/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/MODISTools)
-![Status](https://www.r-pkg.org/badges/version/MODISTools) [![rOpenSci
-Peer
-Review](https://badges.ropensci.org/246_status.svg)](https://github.com/ropensci/software-review/issues/246)
+status](https://github.com/bluegreen-labs/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/bluegreen-labs/MODISTools/actions)
+[![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/master/graph/badge.svg)](https://codecov.io/gh/bluegreen-labs/MODISTools)
+![Status](https://www.r-pkg.org/badges/version/MODISTools)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/MODISTools)
 <!-- badges: end -->
 
@@ -271,7 +269,8 @@ head(dates)
 ## References
 
 Hufkens (2022). The MODISTools package: an interface to the MODIS Land
-Products Subsets Web Services <https://github.com/ropensci/MODISTools>
+Products Subsets Web Services
+<https://github.com/bluegreen-labs/MODISTools>
 
 ## Acknowledgements
 
@@ -281,10 +280,4 @@ Hans Rausing Scholarship. Refactoring was supported through the Belgian
 Science Policy office COBECORE project (BELSPO; grant
 BR/175/A3/COBECORE). Logo design elements are taken from the FontAwesome
 library according to [these terms](https://fontawesome.com/license),
-where the globe element was inverted and intersected. Continued support
-for MODISTools is provided by [BlueGreen
-Labs](https://bluegreenlabs.org).
-
-<a href='https://bluegreenlabs.org'><img src='https://bluegreenlabs.org/img/logo_text_small.png' width="200"/></a>
-
-[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
+where the globe element was inverted and intersected.
