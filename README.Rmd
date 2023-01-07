@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 # MODISTools <a href='https://github.com/ropensci/MODISTools'><img src='https://raw.githubusercontent.com/bluegreen-labs/MODISTools/master/MODISTools-logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
-[![R build status](https://github.com/bluegreen-labs/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/bluegreen-labs/MODISTools/actions) [![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/master/graph/badge.svg)](https://codecov.io/gh/bluegreen-labs/MODISTools) ![Status](https://www.r-pkg.org/badges/version/MODISTools)
+[![R build status](https://github.com/bluegreen-labs/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/bluegreen-labs/MODISTools/actions) [![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/main/graph/badge.svg)](https://codecov.io/gh/bluegreen-labs/MODISTools) ![Status](https://www.r-pkg.org/badges/version/MODISTools)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/MODISTools)
 <!-- badges: end -->
 

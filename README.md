@@ -7,7 +7,7 @@
 
 [![R build
 status](https://github.com/bluegreen-labs/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/bluegreen-labs/MODISTools/actions)
-[![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/master/graph/badge.svg)](https://codecov.io/gh/bluegreen-labs/MODISTools)
+[![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/main/graph/badge.svg)](https://codecov.io/gh/bluegreen-labs/MODISTools)
 ![Status](https://www.r-pkg.org/badges/version/MODISTools)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/MODISTools)
 <!-- badges: end -->
