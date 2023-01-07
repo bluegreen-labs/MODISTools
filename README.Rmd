@@ -1,0 +1,165 @@
+---
+output: github_document
+---
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# MODISTools <a href='https://github.com/ropensci/MODISTools'><img src='https://raw.githubusercontent.com/ropensci/MODISTools/master/MODISTools-logo.png' align="right" height="139" /></a>
+
+<!-- badges: start -->
+[![R build status](https://github.com/ropensci/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/MODISTools/actions) [![codecov](https://codecov.io/gh/ropensci/MODISTools/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/MODISTools) ![Status](https://www.r-pkg.org/badges/version/MODISTools)
+[![rOpenSci Peer Review](https://badges.ropensci.org/246_status.svg)](https://github.com/ropensci/software-review/issues/246)
+![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/MODISTools)
+<!-- badges: end -->
+
+Programmatic interface to the ['MODIS Land Products Subsets' web services](https://modis.ornl.gov/data/modis_webservice.html). Allows for easy downloads of ['MODIS'](http://modis.gsfc.nasa.gov/) time series directly to your R workspace or your computer. When using the package please cite the manuscript as referenced below. Keep in mind that the original manuscript describes versions prior to release 1.0 of the package. Functions described in this manuscript do not exist in the current package, please consult [the documentation](https://docs.ropensci.org/MODISTools/reference/index.html) to find matching functionality.
+
+## Installation
+
+### stable release
+
+To install the current stable release use a CRAN repository:
+
+```{r eval = FALSE}
+install.packages("MODISTools")
+library("MODISTools")
+```
+
+### development release
+
+To install the development releases of the package run the following commands:
+
+```{r eval = FALSE}
+if(!require(devtools)){install.package("devtools")}
+devtools::install_github("khufkens/MODISTools")
+library("MODISTools")
+```
+
+Vignettes are not rendered by default, if you want to include additional documentation please use:
+
+```{r eval = FALSE}
+if(!require(devtools)){install.package("devtools")}
+devtools::install_github("khufkens/MODISTools", build_vignettes = TRUE)
+library("MODISTools")
+```
+
+## Use
+
+### Downloading MODIS time series
+
+To extract a time series of modis data for a given location and its direct environment use the mt_subset() function.
+
+<details><summary>detailed parameter description (click to expand)</summary>
+<p>
+
+Parameter     | Description                      
+------------- | ------------------------------ 	
+product	      | a MODIS product
+band	      | a MODIS product band (if NULL all bands are downloaded)
+lat           | latitude of the site
+lon           | longitude of the site
+start      | start year of the time series (data start in 1980)
+end        | end year of the time series (current year - 2 years, use force = TRUE to override)
+internal      | logical, TRUE or FALSE, if true data is imported into R workspace otherwise it is downloaded into the current working directory
+out_dir | path where to store the data when not used internally, defaults to tempdir()
+km_lr | force "out of temporal range" downloads (integer)
+km_ab | suppress the verbose output (integer)
+site_name | a site identifier
+site_id | a site_id for predefined locations (not required)
+progress | logical, TRUE or FALSE (show download progress)
+
+</p>
+</details>
+
+```{r eval = TRUE}
+# load the library
+library(MODISTools)
+
+# download data
+subset <- mt_subset(product = "MOD11A2",
+                    lat = 40,
+                    lon = -110,
+                    band = "LST_Day_1km",
+                    start = "2004-01-01",
+                    end = "2004-02-01",
+                    km_lr = 1,
+                    km_ab = 1,
+                    site_name = "testsite",
+                    internal = TRUE,
+                    progress = FALSE)
+print(str(subset))
+```
+
+The output format is a *tidy* data frame, as shown above. When witten to a csv with the parameter `internal = FALSE` this will result in a flat file on disk.
+
+Note that when a a region is defined using km_lr and km_ab multiple pixels might be returned. These are indexed using the `pixel` column in the data frame containing the time series data. The remote sensing values are listed in the `value` column. When no band is specified all bands of a given product are returned, be mindful of the fact that different bands might require different multipliers to represent their true values. To list all available products, bands for particular products and temporal coverage see function descriptions below.
+
+### Batch downloading MODIS time series
+
+When a large selection of locations is needed you might benefit from using the batch download function `mt_batch_subset()`, which provides a wrapper around the `mt_subset()` function in order to speed up large download batches. This function has a similar syntax to `mt_subset()` but requires a data frame defining site names (site_name) and locations (lat / lon) (or a comma delimited file with the same structure) to specify a list of download locations.
+
+Below an example is provided on how to batch download data for a data frame of given site names and locations (lat / lon).
+
+```{r eval = TRUE}
+# create data frame with a site_name, lat and lon column
+# holding the respective names of sites and their location
+df <- data.frame("site_name" = paste("test",1:2))
+df$lat <- 40
+df$lon <- -110
+  
+# test batch download
+subsets <- mt_batch_subset(df = df,
+                     product = "MOD11A2",
+                     band = "LST_Day_1km",
+                     internal = TRUE,
+                     start = "2004-01-01",
+                     end = "2004-02-01")
+
+print(str(subsets))
+```
+
+### Listing products
+
+To list all available products use the mt_products() function.
+
+```{r eval = TRUE}
+products <- mt_products()
+head(products)
+```
+
+### Listing bands
+
+To list all available bands for a given product use the mt_bands() function.
+
+```{r eval = TRUE}
+bands <- mt_bands(product = "MOD11A2")
+head(bands)
+```
+
+### listing dates
+
+To list all available dates (temporal coverage) for a given product and location use the mt_dates() function.
+
+```{r eval = TRUE}
+dates <- mt_dates(product = "MOD11A2", lat = 42, lon = -110)
+head(dates)
+```
+
+## References
+
+Hufkens (2022). The MODISTools package: an interface to the MODIS Land Products Subsets Web Services https://github.com/ropensci/MODISTools
+
+## Acknowledgements
+
+Original development was supported by the UK Natural Environment Research Council (NERC; grants NE/K500811/1 and NE/J011193/1), and the Hans Rausing Scholarship. Refactoring was supported through the Belgian Science Policy office COBECORE project (BELSPO; grant BR/175/A3/COBECORE). Logo design elements are taken from the FontAwesome library according to [these terms](https://fontawesome.com/license), where the globe element was inverted and intersected. Continued support for MODISTools is provided by [BlueGreen Labs](https://bluegreenlabs.org).
+
+<a href='https://bluegreenlabs.org'><img src='https://bluegreenlabs.org/img/logo_text_small.png' width="200"/></a>
+
+[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)

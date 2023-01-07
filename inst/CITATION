@@ -1,0 +1,12 @@
+citHeader("To cite package 'MODISTools' in publications use:")
+
+citEntry(entry = "Misc",
+         title = "The MODISTools package: an interface to the MODIS Land Products Subsets Web Services",
+         author = personList(as.person("Koen Hufkens")),
+         year = "2022",
+         url = "https://github.com/ropensci/MODISTools",
+         textVersion  =
+           paste("Hufkens (2022).",
+                 "The MODISTools package: an interface to the MODIS Land Products Subsets Web Services",
+                 "https://github.com/ropensci/MODISTools")
+)
