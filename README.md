@@ -20,8 +20,12 @@ please cite the manuscript as referenced below. Keep in mind that the
 original manuscript describes versions prior to release 1.0 of the
 package. Functions described in this manuscript do not exist in the
 current package, please consult [the
-documentation](https://docs.ropensci.org/MODISTools/reference/index.html)
-to find matching functionality.
+documentation](https://bluegreen-labs.github.io/MODISTools/) to find
+matching functionality.
+
+Please cite the package in your work as: \> Hufkens (2022). The
+MODISTools package: an interface to the MODIS Land Products Subsets Web
+Services <https://github.com/bluegreen-labs/MODISTools>
 
 ## Installation
 
@@ -41,7 +45,7 @@ commands:
 
 ``` r
 if(!require(devtools)){install.package("devtools")}
-devtools::install_github("khufkens/MODISTools")
+devtools::install_github("bluegreen-labs/MODISTools")
 library("MODISTools")
 ```
 
@@ -50,7 +54,7 @@ documentation please use:
 
 ``` r
 if(!require(devtools)){install.package("devtools")}
-devtools::install_github("khufkens/MODISTools", build_vignettes = TRUE)
+devtools::install_github("bluegreen-labs/MODISTools", build_vignettes = TRUE)
 library("MODISTools")
 ```
 
