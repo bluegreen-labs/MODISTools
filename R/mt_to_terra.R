@@ -108,7 +108,7 @@ mt_to_terra <- function(
   if(reproject){
     r <- terra::project(
       r,
-      crs = 4326
+      "EPSG:4326"
       )
   }
 
