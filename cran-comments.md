@@ -3,7 +3,7 @@ http://cran.r-project.org/web/packages/policies.html
 
 ## test environments, local, CI and r-hub
 
-- Ubuntu 20.04 install on R 4.2.2
+- Ubuntu 22.04 install on R 4.2.2
 - Ubuntu 20.04 on github actions (devel / release)
 - Checks for macOS and Windows on github actions
 - codecove.io code coverage at ~88%

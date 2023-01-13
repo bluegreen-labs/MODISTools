@@ -1,20 +1,14 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # MODISTools <a href='https://github.com/ropensci/MODISTools'><img src='https://raw.githubusercontent.com/bluegreen-labs/MODISTools/master/MODISTools-logo.png' align="right" height="139" /></a>
-
-<!-- badges: start -->
 
 [![R build
 status](https://github.com/bluegreen-labs/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/bluegreen-labs/MODISTools/actions)
-[![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/main/graph/badge.svg)](https://codecov.io/gh/bluegreen-labs/MODISTools)
+[![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/main/graph/badge.svg)](https://app.codecov.io/gh/bluegreen-labs/MODISTools/tree/main/R)
 ![Status](https://www.r-pkg.org/badges/version/MODISTools)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/MODISTools)
-<!-- badges: end -->
 
 Programmatic interface to the [‘MODIS Land Products Subsets’ web
 services](https://modis.ornl.gov/data/modis_webservice.html). Allows for
-easy downloads of [‘MODIS’](http://modis.gsfc.nasa.gov/) time series
+easy downloads of [‘MODIS’](https://modis.gsfc.nasa.gov/) time series
 directly to your R workspace or your computer. When using the package
 please cite the manuscript as referenced below. Keep in mind that the
 original manuscript describes versions prior to release 1.0 of the
@@ -23,9 +17,9 @@ current package, please consult [the
 documentation](https://bluegreen-labs.github.io/MODISTools/) to find
 matching functionality.
 
-Please cite the package in your work as: \> Hufkens (2022). The
-MODISTools package: an interface to the MODIS Land Products Subsets Web
-Services <https://github.com/bluegreen-labs/MODISTools>
+Please cite the package in your work as: 
+
+> Hufkens (2022). The MODISTools package: an interface to the MODIS Land Products Subsets Web Services <https://github.com/bluegreen-labs/MODISTools>
 
 ## Installation
 
@@ -107,29 +101,6 @@ subset <- mt_subset(product = "MOD11A2",
                     internal = TRUE,
                     progress = FALSE)
 print(str(subset))
-#> 'data.frame':    36 obs. of  21 variables:
-#>  $ xllcorner    : chr  "-9370963.05" "-9370963.05" "-9370963.05" "-9370963.05" ...
-#>  $ yllcorner    : chr  "4445948.79" "4445948.79" "4445948.79" "4445948.79" ...
-#>  $ cellsize     : chr  "926.625433055834" "926.625433055834" "926.625433055834" "926.625433055834" ...
-#>  $ nrows        : int  3 3 3 3 3 3 3 3 3 3 ...
-#>  $ ncols        : int  3 3 3 3 3 3 3 3 3 3 ...
-#>  $ band         : chr  "LST_Day_1km" "LST_Day_1km" "LST_Day_1km" "LST_Day_1km" ...
-#>  $ units        : chr  "Kelvin" "Kelvin" "Kelvin" "Kelvin" ...
-#>  $ scale        : chr  "0.02" "0.02" "0.02" "0.02" ...
-#>  $ latitude     : num  40 40 40 40 40 40 40 40 40 40 ...
-#>  $ longitude    : num  -110 -110 -110 -110 -110 -110 -110 -110 -110 -110 ...
-#>  $ site         : chr  "testsite" "testsite" "testsite" "testsite" ...
-#>  $ product      : chr  "MOD11A2" "MOD11A2" "MOD11A2" "MOD11A2" ...
-#>  $ start        : chr  "2004-01-01" "2004-01-01" "2004-01-01" "2004-01-01" ...
-#>  $ end          : chr  "2004-02-01" "2004-02-01" "2004-02-01" "2004-02-01" ...
-#>  $ complete     : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
-#>  $ modis_date   : chr  "A2004001" "A2004009" "A2004017" "A2004025" ...
-#>  $ calendar_date: chr  "2004-01-01" "2004-01-09" "2004-01-17" "2004-01-25" ...
-#>  $ tile         : chr  "h09v05" "h09v05" "h09v05" "h09v05" ...
-#>  $ proc_date    : chr  "2020168005635" "2020168010833" "2020168012220" "2020168013617" ...
-#>  $ pixel        : int  1 1 1 1 2 2 2 2 3 3 ...
-#>  $ value        : int  13148 13160 13398 13412 13153 13140 13370 13388 13131 13096 ...
-#> NULL
 ```
 
 The output format is a *tidy* data frame, as shown above. When witten to
@@ -174,29 +145,6 @@ subsets <- mt_batch_subset(df = df,
                      end = "2004-02-01")
 
 print(str(subsets))
-#> 'data.frame':    8 obs. of  21 variables:
-#>  $ xllcorner    : chr  "-9370036.35" "-9370036.35" "-9370036.35" "-9370036.35" ...
-#>  $ yllcorner    : chr  "4446875.49" "4446875.49" "4446875.49" "4446875.49" ...
-#>  $ cellsize     : chr  "926.625433055834" "926.625433055834" "926.625433055834" "926.625433055834" ...
-#>  $ nrows        : int  1 1 1 1 1 1 1 1
-#>  $ ncols        : int  1 1 1 1 1 1 1 1
-#>  $ band         : chr  "LST_Day_1km" "LST_Day_1km" "LST_Day_1km" "LST_Day_1km" ...
-#>  $ units        : chr  "Kelvin" "Kelvin" "Kelvin" "Kelvin" ...
-#>  $ scale        : chr  "0.02" "0.02" "0.02" "0.02" ...
-#>  $ latitude     : num  40 40 40 40 40 40 40 40
-#>  $ longitude    : num  -110 -110 -110 -110 -110 -110 -110 -110
-#>  $ site         : chr  "test 1" "test 1" "test 1" "test 1" ...
-#>  $ product      : chr  "MOD11A2" "MOD11A2" "MOD11A2" "MOD11A2" ...
-#>  $ start        : chr  "2004-01-01" "2004-01-01" "2004-01-01" "2004-01-01" ...
-#>  $ end          : chr  "2004-02-01" "2004-02-01" "2004-02-01" "2004-02-01" ...
-#>  $ complete     : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
-#>  $ modis_date   : chr  "A2004001" "A2004009" "A2004017" "A2004025" ...
-#>  $ calendar_date: chr  "2004-01-01" "2004-01-09" "2004-01-17" "2004-01-25" ...
-#>  $ tile         : chr  "h09v05" "h09v05" "h09v05" "h09v05" ...
-#>  $ proc_date    : chr  "2020168005635" "2020168010833" "2020168012220" "2020168013617" ...
-#>  $ pixel        : int  1 1 1 1 1 1 1 1
-#>  $ value        : int  13129 13102 13343 13364 13129 13102 13343 13364
-#> NULL
 ```
 
 ### Listing products
@@ -206,27 +154,6 @@ To list all available products use the mt_products() function.
 ``` r
 products <- mt_products()
 head(products)
-#>        product
-#> 1       Daymet
-#> 2 ECO4ESIPTJPL
-#> 3      ECO4WUE
-#> 4       GEDI03
-#> 5     GEDI04_B
-#> 6      MCD12Q1
-#>                                                                          description
-#> 1 Daily Surface Weather Data (Daymet) on a 1-km Grid for North America, Version 4 R1
-#> 2               ECOSTRESS Evaporative Stress Index PT-JPL (ESI) Daily L4 Global 70 m
-#> 3                          ECOSTRESS Water Use Efficiency (WUE) Daily L4 Global 70 m
-#> 4                GEDI Gridded Land Surface Metrics (LSM) L3 1km EASE-Grid, Version 2
-#> 5       GEDI Gridded Aboveground Biomass Density (AGBD) L4B 1km EASE-Grid, Version 2
-#> 6              MODIS/Terra+Aqua Land Cover Type (LC) Yearly L3 Global 500 m SIN Grid
-#>   frequency resolution_meters
-#> 1     1 day              1000
-#> 2    Varies                70
-#> 3    Varies                70
-#> 4  One time              1000
-#> 5  One time              1000
-#> 6    1 year               500
 ```
 
 ### Listing bands
@@ -237,20 +164,6 @@ function.
 ``` r
 bands <- mt_bands(product = "MOD11A2")
 head(bands)
-#>               band                          description valid_range fill_value
-#> 1   Clear_sky_days               Day clear-sky coverage    1 to 255          0
-#> 2 Clear_sky_nights             Night clear-sky coverage    1 to 255          0
-#> 3    Day_view_angl View zenith angle of day observation    0 to 130        255
-#> 4    Day_view_time        Local time of day observation    0 to 240        255
-#> 5          Emis_31                   Band 31 emissivity    1 to 255          0
-#> 6          Emis_32                   Band 32 emissivity    1 to 255          0
-#>    units scale_factor add_offset
-#> 1   <NA>         <NA>       <NA>
-#> 2   <NA>         <NA>       <NA>
-#> 3 degree            1        -65
-#> 4    hrs          0.1          0
-#> 5   <NA>        0.002       0.49
-#> 6   <NA>        0.002       0.49
 ```
 
 ### listing dates
@@ -261,13 +174,6 @@ location use the mt_dates() function.
 ``` r
 dates <- mt_dates(product = "MOD11A2", lat = 42, lon = -110)
 head(dates)
-#>   modis_date calendar_date
-#> 1   A2000049    2000-02-18
-#> 2   A2000057    2000-02-26
-#> 3   A2000065    2000-03-05
-#> 4   A2000073    2000-03-13
-#> 5   A2000081    2000-03-21
-#> 6   A2000089    2000-03-29
 ```
 
 ## References

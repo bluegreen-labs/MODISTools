@@ -1,3 +1,7 @@
+# MODISTools 1.1.4
+
+* fixed {terra} reprojection issue
+
 # MODISTools 1.1.3
 
 * removing {raster} dependencies
