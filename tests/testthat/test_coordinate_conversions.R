@@ -50,8 +50,9 @@ test_that("test coordinate transforms",{
   )
 
   # internal reprojection
-  expect_output(
-    mt_to_terra(subset, reproject = TRUE)
+  expect_is(
+    mt_to_terra(subset, reproject = TRUE),
+    "SpatRaster"
   )
 })
 
