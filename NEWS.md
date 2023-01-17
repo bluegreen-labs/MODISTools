@@ -1,6 +1,6 @@
 # MODISTools 1.1.4
 
-* fixed {terra} reprojection issue
+* fixed mt_to_terra() reprojection issue
 
 # MODISTools 1.1.3
 
