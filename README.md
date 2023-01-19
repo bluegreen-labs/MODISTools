@@ -5,6 +5,7 @@ status](https://github.com/bluegreen-labs/MODISTools/workflows/R-CMD-check/badge
 [![codecov](https://codecov.io/gh/bluegreen-labs/MODISTools/branch/main/graph/badge.svg)](https://app.codecov.io/gh/bluegreen-labs/MODISTools/tree/main/R)
 ![Status](https://www.r-pkg.org/badges/version/MODISTools)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/MODISTools)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7551165.svg)](https://doi.org/10.5281/zenodo.7551165)
 
 Programmatic interface to the [‘MODIS Land Products Subsets’ web
 services](https://modis.ornl.gov/data/modis_webservice.html). Allows for
@@ -19,7 +20,7 @@ matching functionality.
 
 Please cite the package in your work as: 
 
-> Hufkens (2022). The MODISTools package: an interface to the MODIS Land Products Subsets Web Services <https://github.com/bluegreen-labs/MODISTools>
+> Koen Hufkens. (2023). bluegreen-labs/MODISTools: MODISTools v1.1.4 (CRAN release) (v1.1.4). Zenodo. https://doi.org/10.5281/zenodo.7551164
 
 ## Installation
 
