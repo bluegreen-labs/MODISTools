@@ -448,6 +448,15 @@ sinusoidal ones).</p>
 <span><span class="co"># the data is reprojected to lat / lon if FALSE</span></span>
 <span><span class="co"># the data is shown in its original sinuidal projection</span></span>
 <span><span class="va">LC_r</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mt_to_terra.html">mt_to_terra</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">arcachon_lc</span>, reproject <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; class       : SpatRaster </span></span>
+<span><span class="co">#&gt; dimensions  : 81, 81, 1  (nrow, ncol, nlyr)</span></span>
+<span><span class="co">#&gt; resolution  : 463.3127, 463.3127  (x, y)</span></span>
+<span><span class="co">#&gt; extent      : -111658.4, -74130.02, 4946790, 4984318  (xmin, xmax, ymin, ymax)</span></span>
+<span><span class="co">#&gt; coord. ref. : +proj=sinu +lon_0=0 +x_0=0 +y_0=0 +R=6371007.181 +units=m +no_defs </span></span>
+<span><span class="co">#&gt; source(s)   : memory</span></span>
+<span><span class="co">#&gt; name        : 2004-01-01 </span></span>
+<span><span class="co">#&gt; min value   :          1 </span></span>
+<span><span class="co">#&gt; max value   :         17</span></span>
 <span></span>
 <span><span class="co"># plot the raster data as a map</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LC_r</span><span class="op">)</span></span></code></pre></div>
