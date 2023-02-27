@@ -6,6 +6,14 @@
 #' @param df a valid MODISTools data frame with a single band (filter for a
 #' particular band using the dplyr \code{filter()} function or base \code{subset()}
 #' @param reproject reproject output to lat / long (default = \code{FALSE})
+#' @param method 	character. Method used for estimating the new cell values of
+#'  a SpatRaster. One of: near: nearest neighbor. This method is fast, and it
+#'  can be the preferred method if the cell values represent classes. It is not
+#'  a good choice for continuous values. This is used by default if the first
+#'  layer of x is categorical. bilinear: bilinear interpolation. This is the
+#'  default if the first layer of x is numeric (not categorical). cubic: cubic
+#'  interpolation. cubicspline: cubic spline interpolation.
+#'
 #' @return A terra SpatRaster populated with the tidy dataframe values
 #' @seealso \code{\link[MODISTools]{mt_subset}}
 #' \code{\link[MODISTools]{mt_batch_subset}}
