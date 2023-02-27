@@ -71,6 +71,14 @@ mt_to_terra <- function(
     stop("Multiple bands in data frame, filter for a single band first!")
   }
 
+  # don't allow reprojections if there is only one pixel
+  if(df$ncol[1] == 1 & df$nrow[1] == 1){
+    stop(
+      "Only a single pixel location is provided (extent of 1x1),
+       convert coordinates using {sf}"
+      )
+  }
+
   # find unique dates for which data should exist
   dates <- unique(df$calendar_date)
 
@@ -112,6 +120,8 @@ mt_to_terra <- function(
   terra::ext(r) <- terra::ext(bb)
   terra::crs(r) <- bb@proj4string@projargs
   names(r) <- as.character(dates)
+
+  print(r)
 
   # reproject to lat long when desired
   if(reproject){
