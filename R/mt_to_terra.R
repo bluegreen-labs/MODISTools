@@ -37,7 +37,8 @@
 
 mt_to_terra <- function(
   df,
-  reproject = FALSE
+  reproject = FALSE,
+  method = "near"
   ){
 
   # trap empty function
@@ -108,7 +109,8 @@ mt_to_terra <- function(
   if(reproject){
     r <- terra::project(
       r,
-      "EPSG:4326"
+      "EPSG:4326",
+      method = method
       )
   }
 
