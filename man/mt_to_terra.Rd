@@ -4,7 +4,7 @@
 \alias{mt_to_terra}
 \title{Convert tidy MODISTools data to terra SpatRaster}
 \usage{
-mt_to_terra(df, reproject = FALSE, method = "near")
+mt_to_terra(df, reproject = FALSE, method = "bilinear")
 }
 \arguments{
 \item{df}{a valid MODISTools data frame with a single band (filter for a

@@ -46,7 +46,7 @@
 mt_to_terra <- function(
   df,
   reproject = FALSE,
-  method = "near"
+  method = "bilinear"
   ){
 
   # trap empty function
