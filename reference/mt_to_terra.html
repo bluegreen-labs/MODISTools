@@ -70,7 +70,7 @@ spatial processing and plotting.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">mt_to_terra</span><span class="op">(</span><span class="va">df</span>, reproject <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">mt_to_terra</span><span class="op">(</span><span class="va">df</span>, reproject <span class="op">=</span> <span class="cn">FALSE</span>, method <span class="op">=</span> <span class="st">"near"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -82,6 +82,16 @@ particular band using the dplyr <code><a href="https://rdrr.io/r/stats/filter.ht
 
 <dt>reproject</dt>
 <dd><p>reproject output to lat / long (default = <code>FALSE</code>)</p></dd>
+
+
+<dt>method</dt>
+<dd><p>character. Method used for estimating the new cell values of
+a SpatRaster. One of: near: nearest neighbor. This method is fast, and it
+can be the preferred method if the cell values represent classes. It is not
+a good choice for continuous values. This is used by default if the first
+layer of x is categorical. bilinear: bilinear interpolation. This is the
+default if the first layer of x is numeric (not categorical). cubic: cubic
+interpolation. cubicspline: cubic spline interpolation.</p></dd>
 
 </dl></div>
     <div id="value">
