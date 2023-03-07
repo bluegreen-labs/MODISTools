@@ -121,8 +121,6 @@ mt_to_terra <- function(
   terra::crs(r) <- bb@proj4string@projargs
   names(r) <- as.character(dates)
 
-  print(r)
-
   # reproject to lat long when desired
   if(reproject){
     r <- terra::project(
