@@ -1,3 +1,7 @@
+# MODISTools 1.1.5
+
+* fix citation style to new bibentry() format
+
 # MODISTools 1.1.4
 
 * fixed mt_to_terra() reprojection issue
