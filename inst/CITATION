@@ -1,12 +1,13 @@
 citHeader("To cite package 'MODISTools' in publications use:")
 
-citEntry(entry = "Misc",
-         title = "The MODISTools package: an interface to the MODIS Land Products Subsets Web Services",
-         author = c(as.person("Koen Hufkens")),
-         year = "2022",
-         url = "https://github.com/bluegreen-labs/MODISTools",
-         textVersion  =
-           paste("Hufkens (2022).",
-                 "The MODISTools package: an interface to the MODIS Land Products Subsets Web Services",
-                 "https://github.com/bluegreen-labs/MODISTools")
+bibentry(
+  bibtype = "Misc",
+  author       = c(as.person("Koen Hufkens")),
+  title        = "The MODISTools package: an interface to the MODIS Land Products Subsets Web Services",
+  month        = "Jan",
+  year         = "2023",
+  publisher    = "Zenodo",
+  version      = "v1.1.4",
+  doi          = "10.5281/zenodo.7551165",
+  url          = "https://doi.org/10.5281/zenodo.7551165"
 )
