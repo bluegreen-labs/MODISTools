@@ -20,7 +20,7 @@ matching functionality.
 
 Please cite the package in your work as: 
 
-> Koen Hufkens. (2023). bluegreen-labs/MODISTools: MODISTools v1.1.4 (CRAN release) (v1.1.4). Zenodo. https://doi.org/10.5281/zenodo.7551164
+> Koen Hufkens. (2023). bluegreen-labs/MODISTools: MODISTools v1.1.5. Zenodo. https://doi.org/10.5281/zenodo.7551164
 
 ## Installation
 
@@ -179,9 +179,7 @@ head(dates)
 
 ## References
 
-Hufkens (2022). The MODISTools package: an interface to the MODIS Land
-Products Subsets Web Services
-<https://github.com/bluegreen-labs/MODISTools>
+Koen Hufkens. (2023). bluegreen-labs/MODISTools: MODISTools v1.1.5. Zenodo. https://doi.org/10.5281/zenodo.7551164
 
 ## Acknowledgements
 
