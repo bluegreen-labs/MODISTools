@@ -20,6 +20,7 @@ matching functionality.
 
 Please cite the package in your work as: 
 
+> [!important]
 > Koen Hufkens. (2023). bluegreen-labs/MODISTools: MODISTools v1.1.5. Zenodo. https://doi.org/10.5281/zenodo.7551164
 
 ## Installation
