@@ -3,7 +3,7 @@
 for a given point location buffered with a given amount of kilometers
 left-right, top-bottom for a given location (provided as latitude and
 longitude values)."><meta name="twitter:card" content="summary"></head><body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-reference-topic">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -36,7 +36,7 @@ longitude values)."><meta name="twitter:card" content="summary"></head><body dat
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
-     
+
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
@@ -49,20 +49,20 @@ longitude values)."><meta name="twitter:card" content="summary"></head><body dat
         <li>
   <a href="https://github.com/bluegreen-labs/MODISTools/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Download MODIS Land Products subsets</h1>
-    <small class="dont-index">Source: <a href="https://github.com/bluegreen-labs/MODISTools/blob/HEAD/R/mt_subset.R" class="external-link"><code>R/mt_subset.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/bluegreen-labs/MODISTools/blob/main/R/mt_subset.R" class="external-link"><code>R/mt_subset.R</code></a></small>
     <div class="hidden name"><code>mt_subset.Rd</code></div>
     </div>
 
@@ -94,71 +94,71 @@ longitude values).</p>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>product</dt>
+
+
+<dl><dt id="arg-product">product<a class="anchor" aria-label="anchor" href="#arg-product"></a></dt>
 <dd><p>a valid MODIS product name</p></dd>
 
 
-<dt>band</dt>
+<dt id="arg-band">band<a class="anchor" aria-label="anchor" href="#arg-band"></a></dt>
 <dd><p>band or bands (as a character vector) to download</p></dd>
 
 
-<dt>lat</dt>
+<dt id="arg-lat">lat<a class="anchor" aria-label="anchor" href="#arg-lat"></a></dt>
 <dd><p>latitude in decimal degrees</p></dd>
 
 
-<dt>lon</dt>
+<dt id="arg-lon">lon<a class="anchor" aria-label="anchor" href="#arg-lon"></a></dt>
 <dd><p>longitude in decimal degrees</p></dd>
 
 
-<dt>start</dt>
+<dt id="arg-start">start<a class="anchor" aria-label="anchor" href="#arg-start"></a></dt>
 <dd><p>start date</p></dd>
 
 
-<dt>end</dt>
+<dt id="arg-end">end<a class="anchor" aria-label="anchor" href="#arg-end"></a></dt>
 <dd><p>end date</p></dd>
 
 
-<dt>km_lr</dt>
+<dt id="arg-km-lr">km_lr<a class="anchor" aria-label="anchor" href="#arg-km-lr"></a></dt>
 <dd><p>km left-right to sample (rounded to the nearest integer)</p></dd>
 
 
-<dt>km_ab</dt>
+<dt id="arg-km-ab">km_ab<a class="anchor" aria-label="anchor" href="#arg-km-ab"></a></dt>
 <dd><p>km above-below to sample (rounded to the nearest integer)</p></dd>
 
 
-<dt>site_id</dt>
+<dt id="arg-site-id">site_id<a class="anchor" aria-label="anchor" href="#arg-site-id"></a></dt>
 <dd><p>site id (overides lat / lon)</p></dd>
 
 
-<dt>network</dt>
+<dt id="arg-network">network<a class="anchor" aria-label="anchor" href="#arg-network"></a></dt>
 <dd><p>the network for which to generate the site list,
 when not provided the complete list is provided</p></dd>
 
 
-<dt>site_name</dt>
+<dt id="arg-site-name">site_name<a class="anchor" aria-label="anchor" href="#arg-site-name"></a></dt>
 <dd><p>arbitrary site name used in writing data to file
 (default = sitename)</p></dd>
 
 
-<dt>out_dir</dt>
+<dt id="arg-out-dir">out_dir<a class="anchor" aria-label="anchor" href="#arg-out-dir"></a></dt>
 <dd><p>path where to store the data if writing to disk
 (default = tempdir())</p></dd>
 
 
-<dt>internal</dt>
+<dt id="arg-internal">internal<a class="anchor" aria-label="anchor" href="#arg-internal"></a></dt>
 <dd><p>should the data be returned as an internal data structure
 <code>TRUE</code> or <code>FALSE</code> (default = <code>TRUE</code>)</p></dd>
 
 
-<dt>progress</dt>
+<dt id="arg-progress">progress<a class="anchor" aria-label="anchor" href="#arg-progress"></a></dt>
 <dd><p>show download progress</p></dd>
 
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    
-
-<p>A data frame combining meta-data and actual data values.</p>
+    <p>A data frame combining meta-data and actual data values.</p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -223,8 +223,8 @@ when not provided the complete list is provided</p></dd>
                           <div class="icon fab fa-github"></div></a>
                         <a href="https://bluegreenlabs.org/labs/" target="_blank" class="external-link">
                           <div class="icon fa fa-flask"></div></a>
-                        <a href="http://twitter.com/bluegreen_labs" target="_blank" class="external-link">
-                          <div class="icon fab fa-twitter"></div></a>
+                        <a href="https://www.linkedin.com/company/bluegreen-labs/" target="_blank" class="external-link">
+                          <div class="icon fa fa-linkedin"></div></a>
                     </div>
                 </div>
                 <div class="row top-4">
@@ -250,10 +250,10 @@ when not provided the complete list is provided</p></dd>
 
       </footer></div>
 
-  
 
 
-  
+
+
 
   </body></html>
 
