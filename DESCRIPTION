@@ -22,7 +22,6 @@ Imports:
     httr,
     utils,
     sf,
-    sp,
     terra,
     stats,
     memoise,
