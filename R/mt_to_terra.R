@@ -41,7 +41,6 @@
 #' LC_r <- mt_to_terra(df = LC)
 #'}
 #' @importFrom terra rast
-#' @import sp
 
 mt_to_terra <- function(
   df,
@@ -113,12 +112,9 @@ mt_to_terra <- function(
     transform = FALSE
     )
 
-  # convert to Spatial object (easier to get extent)
-  bb <- sf::as_Spatial(bb)
-
   # assign extent + projection bb to raster
-  terra::ext(r) <- terra::ext(bb)
-  terra::crs(r) <- bb@proj4string@projargs
+  terra::ext(r) <- sf::st_bbox(bb)[c("xmin", "xmax", "ymin", "ymax")]
+  terra::crs(r) <- sf::st_crs(bb)$wkt
   names(r) <- as.character(dates)
 
   # reproject to lat long when desired
