@@ -205,7 +205,7 @@ points(arcachon_lc$longitude[1],
 
 Although the package is often used to deal with single pixel locations the provisions to download a small region of interest defined by kilometers left-right (west-east) or top-bottom (north-south) allows you to grab small geographic regions for further analysis. The default tidy dataframe format isn't ideal for visualizing this inherently spatial data. Therefore a helper function `mt_to_raster()` is available to convert the tidy dataframe to a gridded (georeferenced) raster format.
 
-Below a small region (20x20km) is downloaded around the seaside town of Arcachon, France for the [MODIS land cover product (MCD12Q1)](https://lpdaac.usgs.gov/products/mcd12q1v006/). The data is converted using `mt_to_raster()` with a reproject parameter set to true to plot latitude and longitude coordinates (instead of the default sinusoidal ones).
+Below a small region (20x20km) is downloaded around the seaside town of Arcachon, France for the [MODIS land cover product (MCD12Q1)](https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-006). The data is converted using `mt_to_raster()` with a reproject parameter set to true to plot latitude and longitude coordinates (instead of the default sinusoidal ones).
 
 
 ```{r fig.width = 5, fig.height=5}

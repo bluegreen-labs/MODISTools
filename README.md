@@ -1,4 +1,4 @@
-# MODISTools <a href='https://github.com/ropensci/MODISTools'><img src='https://raw.githubusercontent.com/bluegreen-labs/MODISTools/master/MODISTools-logo.png' align="right" height="139" /></a>
+# MODISTools <a href='https://github.com/bluegreen-labs/MODISTools'><img src='https://raw.githubusercontent.com/bluegreen-labs/MODISTools/master/MODISTools-logo.png' align="right" height="139" /></a>
 
 [![R build
 status](https://github.com/bluegreen-labs/MODISTools/workflows/R-CMD-check/badge.svg)](https://github.com/bluegreen-labs/MODISTools/actions)
