@@ -1,3 +1,8 @@
+# MODISTools 1.1.6
+
+* removing stray reference to deprecated sp library
+* updating stale URLs
+
 # MODISTools 1.1.5
 
 * fix citation style to new bibentry() format

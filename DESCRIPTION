@@ -1,6 +1,6 @@
 Package: MODISTools
 Title: Interface to the 'MODIS Land Products Subsets' Web Services
-Version: 1.1.5
+Version: 1.1.6
 Authors@R: c(person(
                family = "Hufkens",
                given = "Koen",
@@ -27,9 +27,10 @@ Imports:
     memoise,
     jsonlite
 License: AGPL-3
+Encoding: UTF-8
 LazyData: true
 ByteCompile: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Suggests:
     knitr,
     markdown,
